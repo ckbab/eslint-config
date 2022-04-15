@@ -1,4 +1,25 @@
 {
+  "name": "@ckbab/eslint-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckbab/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckbab/eslint-config/issues"
+  },
+  "homepage": "https://github.com/ckbab/eslint-config#readme",
+  "description": "",
   "dependencies": {
     "babel-eslint": "^10.0.1",
     "babel-preset-expo": "9.0.2",
