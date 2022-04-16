@@ -14,12 +14,23 @@ Then install all peer dependencies `eslint-config` rely on:
 npx install-peerdeps @ckbab/eslint-config --dev
 ```
 
-Finally add `.eslintrc.json` to the root folder:
+Then add `.eslintrc.json` to the root folder:
 
 ```json
 {
   "extends": "@ckbab/eslint-config"
 }
+```
+
+Finally add `babel.config.js` to root folder:
+
+```js
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: ["babel-preset-expo"],
+  };
+};
 ```
 
 You're done!
