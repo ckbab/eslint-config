@@ -1,6 +1,6 @@
 {
   "name": "@ckbab/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,11 +23,9 @@
   "peerDependencies": {
     "@babel/eslint-parser": "^7.17.0",
     "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "prettier": "^2.6.2"
-  },
-  "devDependencies": {
-    "eslint-config-prettier": "^8.5.0"
   }
 }
