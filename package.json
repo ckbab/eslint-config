@@ -1,5 +1,6 @@
 {
   "name": "@ckbab/eslint-config",
+  "description": "Eslint and Prettier config",
   "version": "1.0.5",
   "main": "index.js",
   "scripts": {
@@ -19,7 +20,6 @@
     "url": "https://github.com/ckbab/eslint-config/issues"
   },
   "homepage": "https://github.com/ckbab/eslint-config#readme",
-  "description": "",
   "peerDependencies": {
     "@babel/eslint-parser": "^7.17.0",
     "babel-preset-expo": "^9.0.2",
