@@ -16,7 +16,7 @@ module.exports = {
     require: true,
     setInterval: true,
     setTimeout: true,
-    module,
+    module: true,
   },
   env: {
     es6: true,
