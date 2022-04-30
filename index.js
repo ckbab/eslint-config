@@ -13,10 +13,11 @@ module.exports = {
     clearInterval: true,
     clearTimeout: true,
     console: true,
+    module: true,
+    process: true,
     require: true,
     setInterval: true,
     setTimeout: true,
-    module: true,
   },
   env: {
     es6: true,
