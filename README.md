@@ -5,7 +5,7 @@
 First install the package:
 
 ```bash
-npm install @ckbab/eslint-config --save-dev
+yarn add @ckbab/eslint-config -D
 ```
 
 Then install all peer dependencies `eslint-config` rely on:
@@ -35,16 +35,14 @@ module.exports = function (api) {
 
 You're done!
 
-## Getting latest config
+## Auto format in VS Code
 
-First update the package to latest version:
+Open `settings.json` and add/edit the following properties:
 
-```bash
-npm install @ckbab/eslint-config@latest --save-dev
+```json
+"editor.formatOnSave": false,
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
 ```
 
-Then update all peer dependencies to latest version:
-
-```bash
-npx install-peerdeps @ckbab/eslint-config --dev
-```
+Now your code should be automatically formatted when saving the file.
