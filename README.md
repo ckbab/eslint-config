@@ -62,6 +62,22 @@ Then add `.babelrc.json` to root folder:
 }
 ```
 
+### For Node projects
+
+First installl the following:
+
+```bash
+yarn add @babel/preset-env -D
+```
+
+Then add `.babelrc.json` to root folder:
+
+```json
+{
+  "presets": ["@babel/preset-env"]
+}
+```
+
 ## Format files
 
 Make sure your `package.json` contains the following scripts:
@@ -71,7 +87,6 @@ Make sure your `package.json` contains the following scripts:
 "lint:fix": "npm run lint -- --fix",
 "prettier": "npx prettier . --check",
 "prettier:fix": "npm run prettier -- --write",
-// ...
 "format": "npm run prettier:fix && npm run lint:fix",
 ```
 

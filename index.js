@@ -26,6 +26,7 @@ module.exports = {
     console: true,
     document: true,
     fetch: true,
+    global: true,
     localStorage: true,
     module: true,
     navigator: true,
