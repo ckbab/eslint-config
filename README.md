@@ -51,15 +51,17 @@ Then add `.babelrc.json` to the root folder:
 First installl the following:
 
 ```bash
+yarn add react-native-reanimated
 yarn add babel-preset-expo -D
 ```
 
-Then add `.babelrc.json` to root folder:
+Then add `babel.config.js` to root folder:
 
-```json
-{
-  "presets": ["babel-preset-expo"]
-}
+```js
+module.exports = {
+  presets: ["babel-preset-expo"],
+  plugins: ["react-native-reanimated/plugin"],
+};
 ```
 
 ### For Node projects
