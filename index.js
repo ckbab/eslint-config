@@ -1,12 +1,22 @@
 module.exports = {
   parser: "@babel/eslint-parser",
   extends: ["prettier", "eslint:recommended", "plugin:react/recommended"],
-  plugins: ["prettier"],
+  plugins: [
+    "prettier",
+    "sort-destructure-keys",
+    "simple-import-sort",
+    "sort-keys-fix",
+  ],
   rules: {
-    "prettier/prettier": "error",
-    "react/prop-types": "off",
-    "no-console": "off",
     "no-case-declarations": "off",
+    "no-console": "off",
+    "prettier/prettier": "error",
+    "react/jsx-sort-props": "error",
+    "react/prop-types": "off",
+    "sort-destructure-keys/sort-destructure-keys": "error",
+    "sort-keys-fix/sort-keys-fix": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
   },
   globals: {
     __DEV__: true,
