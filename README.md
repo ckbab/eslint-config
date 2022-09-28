@@ -8,7 +8,7 @@ First install the package:
 yarn add @ckbab/eslint-config -D
 ```
 
-Then install all peer dependencies `eslint-config` rely on:
+Then install all peer dependencies `eslint-config` uses:
 
 ```bash
 npx install-peerdeps @ckbab/eslint-config --dev
@@ -22,22 +22,66 @@ Then add `.eslintrc.json` to the root folder:
 }
 ```
 
-Finally add `babel.config.js` to root folder:
+Then follow the instructions below depending on type of project.
 
-```js
-module.exports = function (api) {
-  api.cache(true);
-  return {
-    presets: ["babel-preset-expo"],
-  };
-};
+### For ReactJS / NextJS projects
+
+First install the following:
+
+```bash
+yarn add @babel/preset-react -D
 ```
 
-You're done!
+For NextJS projects also install:
+
+```bash
+yarn add eslint-config-next -D
+```
+
+Then add `.babelrc` to the root folder:
+
+```json
+{
+  "presets": ["@babel/preset-react"]
+}
+```
+
+### For React Native / Expo projects
+
+First installl the following:
+
+```bash
+yarn add babel-preset-expo -D
+```
+
+Then add `.babelrc` to root folder:
+
+```json
+{
+  "presets": ["babel-preset-expo"]
+}
+```
+
+## Format files
+
+Make sure your `package.json` contains the following scripts:
+
+```json
+"lint": "npx eslint src test",
+"lint:fix": "npm run lint -- --fix",
+"prettier": "npx prettier src test --check",
+"prettier:fix": "npm run prettier -- --write",
+...
+"format": "npm run prettier:fix && npm run lint:fix",
+```
+
+Then run `npm run format` in your project's root folder.
 
 ## Auto format in VS Code
 
-Open `settings.json` and add/edit the following properties:
+First install the extensions: [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and [Format Code Action](https://marketplace.visualstudio.com/items?itemName=rohit-gohri.format-code-action&ssr=false#review-details).
+
+Then open `settings.json` and add/edit the following properties:
 
 ```json
 "editor.formatOnSave": false,
@@ -46,3 +90,8 @@ Open `settings.json` and add/edit the following properties:
 ```
 
 Now your code should be automatically formatted when saving the file.
+
+## Useful links
+
+- https://blog.logrocket.com/using-prettier-eslint-automate-formatting-fixing-javascript/
+- https://codinglicks.com/blog/create-a-reusable-eslint-config/

@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/ckbab/eslint-config#readme",
   "peerDependencies": {
+    "@babel/core": "^7.19.3",
     "@babel/eslint-parser": "^7.17.0",
-    "babel-preset-expo": "^9.0.2",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
