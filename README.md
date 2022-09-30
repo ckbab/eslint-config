@@ -14,15 +14,26 @@ Then install all peer dependencies `eslint-config` uses:
 npx install-peerdeps @ckbab/eslint-config --dev
 ```
 
-Then add `.eslintrc.json` to the root folder:
+## Usage
 
-```json
+Use the config by adding `.eslintrc.json` to the root folder:
+
+```js
 {
-  "extends": "@ckbab/eslint-config"
+  // For ReactJS projects:
+  "extends": "@ckbab/eslint-config/web"
+  // For NextJS projects:
+  "extends": "@ckbab/eslint-config/next"
+  // For React Native projects:
+  "extends": "@ckbab/eslint-config/native"
+  // For NodeJS projects:
+  "extends": "@ckbab/eslint-config/node"
 }
 ```
 
-Then follow the instructions below depending on type of project.
+## Configure Babel
+
+Configure Babel depending on your project.
 
 ### For ReactJS / NextJS projects
 
@@ -30,12 +41,6 @@ First install the following:
 
 ```bash
 yarn add @babel/preset-react -D
-```
-
-For NextJS projects also install:
-
-```bash
-yarn add eslint-config-next -D
 ```
 
 Then add `.babelrc.json` to the root folder:
@@ -85,11 +90,7 @@ Then add `.babelrc.json` to root folder:
 Make sure your `package.json` contains the following scripts:
 
 ```json
-"lint": "npx eslint .",
-"lint:fix": "npm run lint -- --fix",
-"prettier": "npx prettier . --check",
-"prettier:fix": "npm run prettier -- --write",
-"format": "npm run prettier:fix && npm run lint:fix",
+"format": "npx prettier . --write && npx eslint . --fix",
 ```
 
 Then run `npm run format` in your project's root folder.

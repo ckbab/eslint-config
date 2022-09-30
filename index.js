@@ -8,6 +8,7 @@ module.exports = {
   ],
   plugins: [
     "prettier",
+    "react",
     "hooks",
     "react-hooks",
     "sort-destructure-keys",
