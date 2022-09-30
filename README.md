@@ -24,10 +24,10 @@ Use the config by adding `.eslintrc.json` to the root folder:
   "extends": "@ckbab/eslint-config/web"
   // For NextJS projects:
   "extends": "@ckbab/eslint-config/next"
-  // For React Native projects:
-  "extends": "@ckbab/eslint-config/native"
   // For NodeJS projects:
   "extends": "@ckbab/eslint-config/node"
+  // For React Native projects:
+  "extends": "@ckbab/eslint-config/native"
 }
 ```
 
@@ -35,54 +35,36 @@ Use the config by adding `.eslintrc.json` to the root folder:
 
 Configure Babel depending on your project.
 
-### For ReactJS / NextJS projects
-
 First install the following:
 
-```bash
+```js
+// For ReactJS/NextJS projects:
 yarn add @babel/preset-react -D
+// For NodeJS projects:
+yarn add @babel/preset-env -D
+// For React Native projects:
+yarn add babel-preset-expo -D
+yarn add react-native-reanimated
 ```
 
-Then add `.babelrc.json` to the root folder:
+Then for ReactJS/NextJS/NodeJS projects add `.babelrc.json` to the root folder:
 
-```json
+```js
 {
+  // For ReactJS/NextJS projects:
   "presets": ["@babel/preset-react"]
+  // For NodeJS projects:
+  "presets": ["@babel/preset-env"]
 }
 ```
 
-### For React Native / Expo projects
-
-First installl the following:
-
-```bash
-yarn add react-native-reanimated
-yarn add babel-preset-expo -D
-```
-
-Then add `babel.config.js` to root folder:
+For React Native projects, instead of a `.babelrc.json` file, add `babel.config.js` to root folder:
 
 ```js
 module.exports = {
   presets: ["babel-preset-expo"],
   plugins: ["react-native-reanimated/plugin"],
 };
-```
-
-### For Node projects
-
-First installl the following:
-
-```bash
-yarn add @babel/preset-env -D
-```
-
-Then add `.babelrc.json` to root folder:
-
-```json
-{
-  "presets": ["@babel/preset-env"]
-}
 ```
 
 ## Format files
