@@ -1,5 +1,5 @@
 module.exports = {
-  extends: "./index.js",
+  extends: ["./shared/default.js", "./shared/react.js"],
   env: {
     browser: true,
   },

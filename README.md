@@ -14,6 +14,24 @@ Then install all peer dependencies `eslint-config` uses:
 npx install-peerdeps @ckbab/eslint-config --dev
 ```
 
+For ReactJS projects also install:
+
+```bash
+yarn add eslint-plugin-hooks eslint-plugin-react eslint-plugin-react-hooks -D
+```
+
+For NextJS projects also install:
+
+```bash
+yarn add eslint-config-next eslint-plugin-hooks eslint-plugin-react eslint-plugin-react-hooks -D
+```
+
+For React Native projects also install:
+
+```bash
+yarn add eslint-plugin-react-native eslint-plugin-hooks eslint-plugin-react eslint-plugin-react-hooks -D
+```
+
 ## Usage
 
 Use the config by adding `.eslintrc.json` to the root folder:
@@ -72,7 +90,9 @@ module.exports = {
 Make sure your `package.json` contains the following scripts:
 
 ```json
-"format": "npx prettier . --write && npx eslint . --fix",
+{
+  "format": "npx prettier . --write && npx eslint . --fix"
+}
 ```
 
 Then run `npm run format` in your project's root folder.
@@ -84,9 +104,11 @@ First install the extensions: [ESLint](https://marketplace.visualstudio.com/item
 Then open `settings.json` and add/edit the following properties:
 
 ```json
-"editor.formatOnSave": false,
-"editor.defaultFormatter": "esbenp.prettier-vscode",
-"editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
+{
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"]
+}
 ```
 
 Now your code should be automatically formatted when saving the file.

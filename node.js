@@ -1,6 +1,4 @@
 module.exports = {
-  extends: "./index.js",
-  env: {
-    node: true,
-  },
+  extends: "./shared/default.js",
+  // "Node" env already configured.
 };
