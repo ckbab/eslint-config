@@ -5,15 +5,7 @@ module.exports = {
     "hooks/sort": [
       "error",
       {
-        groups: [
-          "useReducer",
-          "useContext",
-          "useState",
-          "useRef",
-          "useDispatch",
-          "useCallback",
-          "useEffect",
-        ],
+        groups: ["useState", "useCallback", "useEffect"],
       },
     ],
     "react/jsx-sort-props": "error",
