@@ -1,7 +1,7 @@
 {
   "name": "@ckbab/eslint-config",
   "description": "Eslint and Prettier config for beautiful code.",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

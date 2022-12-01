@@ -69,8 +69,10 @@ Then for ReactJS/NextJS/NodeJS projects add `.babelrc.json` to the root folder:
 
 ```js
 {
-  // For ReactJS/NextJS projects:
+  // For ReactJS projects:
   "presets": ["@babel/preset-react"]
+  // For NextJS projects:
+  "presets": ["@babel/preset-react", "next/babel"]
   // For NodeJS projects:
   "presets": ["@babel/preset-env"]
 }
